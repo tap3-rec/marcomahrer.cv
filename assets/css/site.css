@@ -205,10 +205,10 @@ h1 em, h2 em, .grad {
 }
 .hero .lede { margin-bottom: 36px; }
 .status {
-  margin-top: 34px; font-size: 14px; color: var(--ink-2); display: inline-flex; align-items: center; gap: 10px;
+  margin-top: 34px; font-size: 14px; color: var(--ink-2); display: inline-flex; align-items: center; gap: 12px; line-height: 1.45;
   padding: 8px 14px 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--bg-2) 70%, transparent);
 }
-.pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 0 rgba(235,99,32,.5); animation: pulse 2.2s infinite; }
+.pulse { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 0 rgba(235,99,32,.5); animation: pulse 2.2s infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(235,99,32,.5);} 70% { box-shadow: 0 0 0 10px rgba(235,99,32,0);} 100% { box-shadow: 0 0 0 0 rgba(235,99,32,0);} }
 @media (prefers-reduced-motion: reduce) { .pulse { animation: none; } }
 .hero-404 { min-height: 60vh; }
@@ -436,8 +436,13 @@ section.projects { padding: clamp(80px, 11vh, 140px) 0; border-top: 1px solid va
 .tenure details .sub + ul { margin-top: 8px; }
 
 /* ── Language switch ────────────────────────────────────── */
-.nav-links .lang { font-size: 12px; font-weight: 600; letter-spacing: .08em; padding: 6px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-2); }
-.nav-links .lang::after { display: none; }
-.nav-links .lang:hover { border-color: var(--ink); color: var(--ink); }
+.nav-links a.lang {
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 34px; height: 34px; padding: 0; border-radius: 50%;
+  font-size: 11.5px; font-weight: 600; letter-spacing: .06em; line-height: 1;
+  border: 1px solid var(--line); color: var(--ink-2); transition: border-color .2s, color .2s;
+}
+.nav-links a.lang::after { display: none; }
+.nav-links a.lang:hover { border-color: var(--ink); color: var(--ink); }
 .post-row-lang { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; }
 @media (max-width: 760px) { .nav-inner .nav-links .btn-small { margin-left: auto; } .nav-inner .nav-links .lang { margin-left: 0; } }
