@@ -167,7 +167,7 @@ h1 em, h2 em, .grad {
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
 .wordmark {
-  font-family: var(--font-display); font-weight: 600; font-size: 21px; letter-spacing: -0.02em;
+  font-family: var(--font-display); font-weight: 600; font-size: 25px; letter-spacing: -0.02em; white-space: nowrap; flex: none;
   font-variation-settings: "opsz" 48;
   background: linear-gradient(90deg, var(--ink), var(--ink));
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
@@ -182,7 +182,12 @@ h1 em, h2 em, .grad {
 }
 .nav-links a:not(.btn):hover, .nav-links a:not(.btn).active { color: var(--ink); }
 .nav-links a:not(.btn):hover::after, .nav-links a:not(.btn).active::after { transform: scaleX(1); }
-@media (max-width: 640px) { .nav-links { gap: 16px; font-size: 13px; } .nav-inner { height: 60px; } }
+@media (max-width: 640px) {
+  .nav-inner { height: 62px; }
+  .wordmark { font-size: 22px; }
+  .nav-links { gap: 14px; font-size: 14px; }
+  .nav-links a[href="/#work"], .nav-links a[href="/#contact"] { display: none; }
+}
 
 /* ── Hero ───────────────────────────────────────────────── */
 .hero { padding: clamp(72px, 14vh, 150px) 0 clamp(56px, 8vh, 96px); }
