@@ -446,3 +446,11 @@ section.projects { padding: clamp(80px, 11vh, 140px) 0; border-top: 1px solid va
 .nav-links a.lang:hover { border-color: var(--ink); color: var(--ink); }
 .post-row-lang { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; }
 @media (max-width: 760px) { .nav-inner .nav-links .btn-small { margin-left: auto; } .nav-inner .nav-links .lang { margin-left: 0; } }
+
+/* ── Classified easter egg ──────────────────────────────── */
+.classified { margin-top: 14px; padding: 26px 20px; border: 1px dashed var(--line); border-radius: 14px; text-align: center; max-width: 66ch; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.classified p { margin: 0; font-size: 12px; color: var(--ink-3); letter-spacing: .04em; }
+.classified-title { font-size: 13px !important; font-weight: 600; letter-spacing: .18em !important; color: var(--red) !important; margin-bottom: 8px !important; }
+.classified-note { margin-top: 14px; font-size: 13.5px; color: var(--ink-3); max-width: 66ch; }
+.classified-note a { color: var(--ink-2); border-bottom: 1px solid var(--line); transition: color .2s, border-color .2s; }
+.classified-note a:hover { color: var(--orange); border-color: var(--orange); }
