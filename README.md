@@ -53,4 +53,4 @@ Then open http://localhost:4747. The preview renders the same layouts and posts 
 
 ## Updating the CV PDF
 
-Replace `assets/Marco-Mahrer-CV.pdf`. The download links in the nav and contact section point at that path.
+Replace `assets/Marco-Mahrer-CV.pdf` (English) and `assets/Marco-Mahrer-Lebenslauf.pdf` (German). The English pages link the first, the German pages the second, and the German contact section links both. The German PDF is built in career-ops from `cv-de.md` with `templates/cv-template-de.html`.
