@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{% if page.title %}<title>{{ page.title }} · Marco Mahrer</title>{% else %}<title>Marco Mahrer · Talent Acquisition Leader</title>{% endif %}
+{% if page.title %}<title>{{ page.title }} · Marco Mahrer</title>{% else %}<title>Marco Mahrer · Talent Acquisition Partner³</title>{% endif %}
 {% if page.lang == 'de' %}<link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.alt_url | default: '/' }}">
 <link rel="alternate" hreflang="de" href="{{ site.url }}{{ page.url }}">{% else %}<link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url }}">
 <link rel="alternate" hreflang="de" href="{{ site.url }}{{ page.alt_url | default: '/de/' }}">{% endif %}
@@ -14,7 +14,7 @@
 <meta name="theme-color" content="#131117" media="(prefers-color-scheme: dark)">
 <meta property="og:site_name" content="Marco Mahrer">
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-<meta property="og:title" content="{{ page.title | default: 'Marco Mahrer · Talent Acquisition Leader' }}">
+<meta property="og:title" content="{{ page.title | default: 'Marco Mahrer · Talent Acquisition Partner³' }}">
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 {% if page.layout == 'post' %}<meta property="og:image" content="{{ site.url }}/assets/img/og/{{ page.url | slugify }}.png">
