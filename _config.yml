@@ -1,0 +1,19 @@
+title: Marco Mahrer
+description: Talent acquisition leader who treats hiring as a systems problem. Fifteen years in tech TA across Europe and the US, three unicorns grown, AI-native.
+url: https://marcomahrer.cv
+author: Marco Mahrer
+timezone: Europe/Zurich
+permalink: /writing/:title/
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+feed:
+  path: feed.xml
+exclude:
+  - node_modules
+  - tools
+  - package.json
+  - package-lock.json
+  - README.md
+  - _preview

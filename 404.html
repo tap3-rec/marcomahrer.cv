@@ -1,53 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not Found — Marco Mahrer</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Montserrat', -apple-system, sans-serif;
-    background: #F9F6F1;
-    color: #2a2a2a;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-  }
-  h1 {
-    font-size: 5rem;
-    font-weight: 900;
-    background: linear-gradient(135deg, #301c57, #DF3912, #EB6320);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  p {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #6b6b6b;
-  }
-  a {
-    margin-top: 2rem;
-    color: #EB6320;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  a:hover { color: #301c57; }
-</style>
-</head>
-<body>
-  <h1>404</h1>
-  <p>This page doesn't exist yet.</p>
-  <a href="/">Back to the profile</a>
-</body>
-</html>
+---
+layout: default
+title: Not found
+permalink: /404.html
+body_class: page-404
+---
+<section class="hero hero-404">
+  <div class="wrap">
+    <p class="eyebrow">404</p>
+    <h1>That page <em>isn't here.</em></h1>
+    <p class="lede">It may have moved, or it never existed. The profile is one click away.</p>
+    <div class="cta"><a class="btn btn-primary" href="/">Back to the profile</a><a class="btn btn-ghost" href="/writing/">Read the writing →</a></div>
+  </div>
+</section>

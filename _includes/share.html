@@ -1,0 +1,8 @@
+<div class="share" data-share data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url }}">
+  <span class="share-label">Share</span>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="share-btn" href="https://x.com/intent/post?text={{ page.title | url_encode }}&amp;url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">X</a>
+  <a class="share-btn" href="mailto:?subject={{ page.title | url_encode }}&amp;body={{ page.url | absolute_url | url_encode }}">Email</a>
+  <button class="share-btn" type="button" data-copy>Copy link</button>
+  <button class="share-btn share-native" type="button" data-native hidden>Share…</button>
+</div>

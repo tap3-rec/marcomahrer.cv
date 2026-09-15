@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header prose-wrap">
+    <a class="back" href="/writing/">← Writing</a>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}<p class="post-standfirst">{{ page.description }}</p>{% endif %}
+    <p class="post-meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time> · {{ content | number_of_words | divided_by: 220 | plus: 1 }} min read</p>
+  </header>
+  <div class="prose prose-wrap">
+    {{ content }}
+  </div>
+  <footer class="post-footer prose-wrap">
+    {% include share.html %}
+    <p>Thoughts, disagreements, or a hiring problem you are stuck on? <a href="mailto:marco.mahrer@gmail.com">Write to me</a> or find me on <a href="https://www.linkedin.com/in/marcomahrer/">LinkedIn</a>.</p>
+    <a class="btn btn-ghost" href="/writing/">More writing →</a>
+  </footer>
+</article>
