@@ -3,7 +3,7 @@ description: Talent acquisition leader who treats hiring as a systems problem. F
 url: https://marcomahrer.cv
 author: Marco Mahrer
 timezone: Europe/Zurich
-permalink: /writing/:title/
+permalink: /blog/:title/
 markdown: kramdown
 plugins:
   - jekyll-feed

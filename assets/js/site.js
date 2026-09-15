@@ -26,7 +26,7 @@
       var open = expandAll.getAttribute('data-open') !== 'true';
       details.forEach(function (d) { d.open = open; });
       expandAll.setAttribute('data-open', open ? 'true' : 'false');
-      expandAll.textContent = open ? 'Collapse all' : 'Expand all';
+      expandAll.textContent = open ? (expandAll.getAttribute('data-label-close') || 'Collapse all') : (expandAll.getAttribute('data-label-open') || 'Expand all');
     });
   }
 

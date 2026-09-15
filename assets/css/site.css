@@ -103,7 +103,7 @@ body::before {
 }
 a { color: inherit; text-decoration: none; }
 p { margin: 0; }
-h1, h2, h3, h4 { margin: 0; font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; line-height: 1.05; }
+h1, h2, h3, h4 { margin: 0; font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; line-height: 1.05; text-wrap: balance; }
 h1 { font-variation-settings: "opsz" 144; }
 h2 { font-size: clamp(34px, 4.6vw, 56px); font-variation-settings: "opsz" 96; }
 h3 { font-size: 26px; font-variation-settings: "opsz" 48; }
@@ -419,3 +419,25 @@ section h2 { margin-bottom: 44px; max-width: 18ch; }
   :root:not([data-theme="light"]) .theme-toggle .sun { display: none; }
   :root:not([data-theme="light"]) .theme-toggle .moon { display: block; }
 }
+
+/* ── Projects ───────────────────────────────────────────── */
+section.projects { padding: clamp(80px, 11vh, 140px) 0; border-top: 1px solid var(--line); }
+.project-list { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 32px; }
+.project-list li { padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+.project-list strong { font-family: var(--font-display); font-weight: 500; font-size: 20px; letter-spacing: -0.015em; line-height: 1.2; font-variation-settings: "opsz" 36; }
+.project-list span { font-size: 14.5px; line-height: 1.6; color: var(--ink-2); }
+@media (max-width: 960px) { .project-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .project-list { grid-template-columns: 1fr; } }
+
+/* ── Tenure extras ──────────────────────────────────────── */
+.tenure h3 a { border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+.tenure h3 a:hover { color: var(--orange); border-color: var(--orange); }
+.tenure details .sub { margin-top: 18px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.tenure details .sub + ul { margin-top: 8px; }
+
+/* ── Language switch ────────────────────────────────────── */
+.nav-links .lang { font-size: 12px; font-weight: 600; letter-spacing: .08em; padding: 6px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-2); }
+.nav-links .lang::after { display: none; }
+.nav-links .lang:hover { border-color: var(--ink); color: var(--ink); }
+.post-row-lang { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; }
+@media (max-width: 760px) { .nav-inner .nav-links .btn-small { margin-left: auto; } .nav-inner .nav-links .lang { margin-left: 0; } }

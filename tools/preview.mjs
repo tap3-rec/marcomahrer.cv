@@ -40,7 +40,7 @@ const posts = fs.readdirSync(path.join(ROOT, '_posts')).filter(f => f.endsWith('
   const { data, body } = frontMatter(fs.readFileSync(path.join(ROOT, '_posts', f), 'utf8'));
   const m = f.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.md$/);
   if (!m) throw new Error('post filename must be YYYY-MM-DD-slug.md: ' + f);
-  return { ...data, date: new Date(m[1] + 'T12:00:00Z'), url: `/writing/${m[2]}/`, body };
+  return { ...data, date: new Date(m[1] + 'T12:00:00Z'), url: `/blog/${m[2]}/`, body };
 }).sort((a, b) => b.date - a.date);
 const site = { ...config, posts, time: new Date() };
 
@@ -132,8 +132,10 @@ function buildPage(srcRel, outRel) {
 
 fs.rmSync(OUT, { recursive: true, force: true });
 buildPage('index.html', 'index.html');
-buildPage('writing/index.html', 'writing/index.html');
+buildPage('blog/index.html', 'blog/index.html');
 buildPage('404.html', '404.html');
+buildPage('de/index.html', 'de/index.html');
+buildPage('de/blog/index.html', 'de/blog/index.html');
 for (const post of posts) {
   const content = marked.parse(post.body);
   write(post.url.slice(1) + 'index.html', applyLayout(post.layout || 'post', content, post));

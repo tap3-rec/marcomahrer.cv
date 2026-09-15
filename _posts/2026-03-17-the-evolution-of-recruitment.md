@@ -4,6 +4,7 @@ title: The Evolution of Recruitment
 description: How tech hiring transformed over two decades, from job boards to autonomous agents, and the gap no one has solved yet.
 redirect_from:
   - /evolution/
+  - /writing/the-evolution-of-recruitment/
 ---
 
 I have spent fifteen years inside hiring systems, and most of what I believe about where talent acquisition is going comes from watching how it got here. This is the short version of that history, era by era, and the problem I think is still wide open at the end of it.

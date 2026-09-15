@@ -1,0 +1,31 @@
+---
+layout: default
+title: Blog
+redirect_from:
+  - /de/writing/
+lang: de
+alt_url: /blog/
+description: Gedanken dazu, wohin die Rekrutierung geht. Systeme, Beurteilung, AI und die Teile der Personalgewinnung, die noch niemand automatisiert hat.
+body_class: page-writing
+---
+<section class="page-head prose-wrap">
+  <p class="eyebrow">Blog</p>
+  <h1>Wohin die Rekrutierung geht.</h1>
+  <p class="lede">Notizen aus fünfzehn Jahren in Rekrutierungssystemen. Meist darüber, was beim Skalieren bricht, was AI wirklich verändert und welche Lücke noch niemand geschlossen hat. Die Beiträge erscheinen in der Sprache, in der ich sie geschrieben habe.</p>
+</section>
+<section class="post-list prose-wrap">
+  {% for post in site.posts %}
+  <a class="post-row" href="{{ post.url }}">
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d.%m.%Y" }}</time>
+    <span class="post-row-body">
+      <span class="post-row-title">{{ post.title }}</span>
+      {% if post.description %}<span class="post-row-desc">{{ post.description }}</span>{% endif %}
+      {% if post.lang != 'de' %}<span class="post-row-lang">Auf Englisch</span>{% endif %}
+    </span>
+    <span class="post-row-arrow" aria-hidden="true">→</span>
+  </a>
+  {% endfor %}
+</section>
+<section class="prose-wrap subscribe">
+  <p>Neue Beiträge erscheinen zuerst hier. Per <a href="/feed.xml">RSS</a>, falls Sie einen Reader nutzen, oder auf <a href="https://www.linkedin.com/in/marcomahrer/">LinkedIn</a>.</p>
+</section>

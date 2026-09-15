@@ -13,7 +13,7 @@ const posts = fs.readdirSync(path.join(ROOT, '_posts')).filter(f => f.endsWith('
   const src = fs.readFileSync(path.join(ROOT, '_posts', f), 'utf8');
   const title = (src.match(/^title:\s*(.+)$/m) || [])[1]?.replace(/^["']|["']$/g, '') || f;
   const slug = f.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
-  return { title, file: slugify('/writing/' + slug + '/') + '.png' };
+  return { title, file: slugify('/blog/' + slug + '/') + '.png' };
 });
 const exe = process.env.HOME + '/Library/Caches/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-mac-arm64/chrome-headless-shell';
 const browser = await chromium.launch({ executablePath: fs.existsSync(exe) ? exe : undefined });
@@ -27,7 +27,7 @@ for (const p of posts) {
   const target = path.join(outDir, p.file);
   if (fs.existsSync(target) && !process.argv.includes('--force')) { console.log('skip (exists)', p.file); continue; }
   await page.evaluate(({ title }) => {
-    document.getElementById('eyebrow').textContent = 'Writing · Marco Mahrer';
+    document.getElementById('eyebrow').textContent = 'Blog · Marco Mahrer';
     const h = document.getElementById('title'); h.className = 'post';
     const words = title.split(' '); const last = words.pop();
     h.innerHTML = words.join(' ') + ' <em>' + last + '</em>';
