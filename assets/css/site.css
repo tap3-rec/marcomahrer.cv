@@ -194,7 +194,7 @@ h1 em, h2 em, .grad {
   .nav.scrolled .nav-inner { padding: 10px 0 10px; row-gap: 6px; }
   .theme-toggle { grid-area: toggle; }
   .nav-inner .nav-links { grid-area: links; margin-left: 0; width: 100%; gap: 20px; font-size: 15px; }
-  .nav-inner .nav-links .btn-small { margin-left: auto; }
+  .nav-inner .nav-links .lang { margin-left: auto; }
 }
 
 /* ── Hero ───────────────────────────────────────────────── */
@@ -310,6 +310,7 @@ section h2 { margin-bottom: 44px; max-width: 18ch; }
 .skill-group h3 { font-size: 15px; font-family: var(--font-body); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chips .hl { border-color: transparent; background: var(--grad); color: #fff; }
+.skill-group--wide { grid-column: 1 / -1; }
 .extras { margin-top: 56px; padding-top: 36px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px 48px; }
 .extras h4 { font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 10px; }
 .extras p { font-size: 14.5px; line-height: 1.65; color: var(--ink-2); }
@@ -445,7 +446,6 @@ section.projects { padding: clamp(80px, 11vh, 140px) 0; border-top: 1px solid va
 .nav-links a.lang::after { display: none; }
 .nav-links a.lang:hover { border-color: var(--ink); color: var(--ink); }
 .post-row-lang { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; }
-@media (max-width: 760px) { .nav-inner .nav-links .btn-small { margin-left: auto; } .nav-inner .nav-links .lang { margin-left: 0; } }
 
 /* ── Classified easter egg ──────────────────────────────── */
 .classified { margin-top: 14px; padding: 26px 20px; border: 1px dashed var(--line); border-radius: 14px; text-align: center; max-width: 66ch; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
