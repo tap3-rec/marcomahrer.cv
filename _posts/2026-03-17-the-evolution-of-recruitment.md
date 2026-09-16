@@ -102,4 +102,4 @@ The people who will solve it are not AI engineers who discovered recruiting last
 
 That is the gap I am building toward.
 
-The first proof is running at caffeine.ai: a talent acquisition function with AI as the operating layer, where self-built MCPs put the ATS, CRM, note-takers, and sourcing tools behind one LLM interface, screening runs on Claude, Scout, an AI interviewer prototype, takes first-round screens, and the interview process was redesigned with the CTO to hold signal in an AI-saturated market. Consolidation and integrity, one system, one recruiter. AI drafts and ranks. I decide.
+The first proof is running at caffeine.ai: a talent acquisition function with AI as the operating layer, where self-built MCPs put the ATS, CRM, note-takers, and sourcing tools behind one LLM interface, screening runs on Claude, Scout, an AI interviewer prototype, takes first-round screens, and the interview process was redesigned with the CTO to hold signal in an AI-saturated market. Consolidation and integrity, one system, one recruiter. AI drafts, coordinates, and ranks. Humans decide.
