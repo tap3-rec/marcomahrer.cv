@@ -210,7 +210,9 @@ h1 em, h2 em, .grad {
   font-size: clamp(46px, 8.2vw, 108px);
   max-width: 14ch; line-height: 0.98; margin-bottom: 30px;
 }
-.hero .lede { margin-bottom: 36px; }
+.hero .lede { margin-bottom: 14px; }
+.tagline { font-size: clamp(18px, 1.5vw, 21px); line-height: 1.6; color: var(--ink-2); max-width: 640px; margin-bottom: 36px; }
+.tagline span { display: block; }
 .status {
   margin-top: 34px; font-size: 14px; color: var(--ink-2); display: inline-flex; align-items: center; gap: 12px; line-height: 1.45;
   padding: 8px 14px 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--bg-2) 70%, transparent);
