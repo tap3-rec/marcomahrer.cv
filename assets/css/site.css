@@ -322,7 +322,9 @@ section h2 { margin-bottom: 44px; max-width: 18ch; }
 .skill-group--wide { grid-column: 1 / -1; }
 .extras { margin-top: 56px; padding-top: 36px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px 48px; }
 .extras h4 { font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 10px; }
-.extras p { font-size: 14.5px; line-height: 1.65; color: var(--ink-2); }
+.extras ul { list-style: none; font-size: 14.5px; line-height: 1.5; color: var(--ink-2); display: grid; gap: 6px; }
+.extras li { position: relative; padding-left: 16px; }
+.extras li::before { content: ""; position: absolute; left: 0; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--orange); }
 @media (max-width: 860px) { .skill-grid, .extras { grid-template-columns: 1fr; } }
 
 /* Contact */
@@ -438,6 +440,30 @@ section.projects { padding: clamp(80px, 11vh, 140px) 0; border-top: 1px solid va
 .project-list span { font-size: 14.5px; line-height: 1.6; color: var(--ink-2); }
 @media (max-width: 960px) { .project-list { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .project-list { grid-template-columns: 1fr; } }
+
+/* ── Companies ──────────────────────────────────────────── */
+section.companies { padding: clamp(56px, 8vh, 96px) 0; --logo-h: clamp(22px, 2.3vw, 28px); }
+section.companies h2 { margin-bottom: 36px; }
+.logo-group + .logo-group { margin-top: 40px; }
+.logo-group h3 { font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 22px; }
+.logo-list { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 30px clamp(30px, 4.5vw, 60px); }
+.logo { display: inline-flex; align-items: center; height: var(--logo-h); opacity: .82; transition: opacity .25s var(--ease); }
+.logo:hover, .logo:focus-visible { opacity: 1; }
+.logo:focus-visible { outline: 2px solid var(--orange); outline-offset: 8px; border-radius: 4px; }
+.logo-img { display: block; height: calc(var(--logo-h) * var(--s, 1)); width: auto; }
+.logo-dark { display: none; }
+:root[data-theme="dark"] .logo-light { display: none; }
+:root[data-theme="dark"] .logo-dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo-light { display: none; }
+  :root:not([data-theme="light"]) .logo-dark { display: block; }
+}
+.logo-text { font-family: var(--font-display); font-weight: 500; font-size: calc(var(--logo-h) * .92); letter-spacing: -0.015em; line-height: 1; color: var(--ink); font-variation-settings: "opsz" 36; }
+@media (max-width: 600px) { .logo-list { gap: 22px 28px; } }
+.js .logo-list.reveal { transform: translateY(8px); transition-duration: .35s; }
+.logo-lockup { gap: 10px; }
+.logo-lockup .logo-img { height: calc(var(--logo-h) * 1.05); border-radius: 3px; }
+@media (prefers-reduced-motion: reduce) { .logo { transition: none; } }
 
 /* ── Tenure extras ──────────────────────────────────────── */
 .tenure h3 a { border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
